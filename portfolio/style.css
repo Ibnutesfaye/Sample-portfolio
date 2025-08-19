@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to top, rgba(33, 37, 41, 0.95) 50%, rgba(33, 37, 41, 0.95) 50%), url("back\ 1\ re.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px 5%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #e9ecef;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+.menu ul li a:hover {
+    color: #eaab0c;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff7200;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.info {
+    width: 55%;
+}
+
+.info h3 {
+    font-size: 24px;
+    color: #e9ecef;
+    margin-bottom: 15px;
+}
+
+.info h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.info p {
+    font-size: 18px;
+    color: #ced4da;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.fa-youtube {
+    background: #f03232;
+}
+
+.fa-facebook {
+    background: #3b5998;
+}
+
+.fa-instagram {
+    background: #e1306c;
+}
+
+.image-container {
+    width: 40%;
+    text-align: right;
+}
+
+.image-container img:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+    width: 350px;
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: float-rotate 6s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+@keyframes float-rotate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-15px) rotate(-5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .main {
+        padding: 10px 2%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu ul li a {
+        font-size: 13px;
+    }
+
+    .info h3 {
+        font-size: 18px;
+    }
+
+    .info h1 {
+        font-size: 28px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    .image-container img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info, .image-container {
+        width: 100%;
+    }
+
+    .image-container {
+        margin-top: 50px;
+        text-align: center;
+    }
+}
+
+ @media (max-width: 768px) {
+    .main {
+        padding: 15px 3%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+    }
+
+    .content {
+        margin-top: 40px;
+    }
+
+    .info h3 {
+        font-size: 20px;
+    }
+
+    .info h1 {
+        font-size: 32px;
+    }
+
+    .info p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .image-container {
+        margin-top: 30px;
+    }
+
+    .image-container img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
